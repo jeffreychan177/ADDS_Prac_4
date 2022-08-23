@@ -2,24 +2,41 @@
 #include <iostream>
 #include "Reverse.h"
 #include "Truckloads.h"
-
+#include "EfficientTruckloads.h"
+using namespace std;
 int main()
 {
+    int i;
+    std::string s;
+    int numCrates;
+    int loadSize;
+
+    cin >> i;
+    cin >> s;
+    cin >> numCrates;
+    cin >> loadSize;
+
     Reverse rev;
-    std::cout << rev.reverseDigit(10) << std::endl;
-    std::cout << rev.reverseDigit(45678) << std::endl;
-    std::cout << rev.reverseString("abcdef") << std::endl;
-    std::cout << rev.reverseString("asfafs") << std::endl;
+    Truckloads truck(loadSize);
+    EfficientTruckloads Truck(loadSize);
 
-    Truckloads truck(3);
-    std::cout << truck.numTrucks(14) << std::endl;
+    if (i < 0)
+    {
+        std::cout << "ERROR";
+    }
+    else
+    {
+        std::cout << rev.reverseDigit(i);
+    }
 
-    Truckloads trucka;
-    trucka.setLoadSize(1);
-    std::cout << trucka.numTrucks(15) << std::endl;
+    std::cout << " " << rev.reverseString(s) << " ";
 
-    Truckloads truckb(5);
-    std::cout << truckb.numTrucks(1024) << std::endl;
+        if(numCrates > 0 && loadSize > 0)
+    {
+        std::cout << truck.numTrucks(numCrates) << " " << Truck.numTrucks(numCrates) << std::endl;
+    }else{
+        std::cout << "ERROR" << " " << "ERROR" << std::endl;
+    }
 
     return 0;
 }

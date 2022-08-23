@@ -1,5 +1,6 @@
 #include "Truckloads.h"
 #include <iostream>
+
 Truckloads::Truckloads(int LoadSize)
 {
     loadSize = LoadSize;
@@ -14,7 +15,6 @@ Truckloads::Truckloads()
 
 int Truckloads::numTrucks(int numCrates)
 {
-
     num = 1;
     return divide(numCrates);
 };

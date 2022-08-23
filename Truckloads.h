@@ -1,6 +1,5 @@
 #ifndef _TRUCKLOADS_H
 #define _TRUCKLOADS_H
-
 class Truckloads {
     public:
     Truckloads();
