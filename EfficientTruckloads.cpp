@@ -13,21 +13,25 @@ EfficientTruckloads::EfficientTruckloads()
     loadSize = 0;
 };
 
-int EfficientTruckloads::numTrucks(int numCrates,int LoadSize)
+int EfficientTruckloads::numTrucks(int numCrates, int LoadSize)
 {
-    if (0 <= numCrates && numCrates <= 10000 && 0 <= LoadSize && LoadSize <= 10000){
-    loadSize = LoadSize;
-    num = 1;
-    if (calculated.count(numCrates) > 0)
+    if (0 <= numCrates && numCrates <= 10000 && 0 <= LoadSize && LoadSize <= 10000)
     {
-        return calculated.at(numCrates);
+        loadSize = LoadSize;
+        num = 1;
+        if (calculated.count(numCrates) > 0)
+        {
+            return calculated.at(numCrates);
+        }
+        else
+        {
+            int div = divide(numCrates);
+            calculated.insert(std::pair<int, int>(numCrates, div));
+            return div;
+        }
     }
     else
     {
-        int div = divide(numCrates);
-        calculated.insert(std::pair<int, int>(numCrates, div));
-        return div;
-    }}else{
         return 0;
     }
 };
