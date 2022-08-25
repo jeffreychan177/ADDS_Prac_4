@@ -9,6 +9,10 @@ Reverse::Reverse()
 };
 int Reverse::reverseDigit(int value)
 {
+    if(value < 0){
+        return -1;
+    }
+
     int length = log10(value) + 1;
     if (length >= 1)
     {
