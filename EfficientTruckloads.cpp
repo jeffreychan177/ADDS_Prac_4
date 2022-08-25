@@ -28,7 +28,7 @@ int EfficientTruckloads::numTrucks(int numCrates,int LoadSize)
         calculated.insert(std::pair<int, int>(numCrates, div));
         return div;
     }}else{
-        return -1;
+        return 0;
     }
 };
 
