@@ -15,6 +15,7 @@ Truckloads::Truckloads()
 
 int Truckloads::numTrucks(int numCrates,int LoadSize)
 {
+    loadSize = LoadSize;
     num = 1;
     return divide(numCrates);
 };
