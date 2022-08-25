@@ -15,7 +15,7 @@ Truckloads::Truckloads()
 
 int Truckloads::numTrucks(int numCrates, int LoadSize)
 {
-    if (0 <= numCrates && numCrates <= 10000 && 0 <= LoadSize && LoadSize <= 10000)
+    if (0 <= numCrates || numCrates <= 10000 ||0 <= LoadSize || LoadSize || 10000)
     {
         loadSize = LoadSize;
         num = 1;
@@ -23,7 +23,7 @@ int Truckloads::numTrucks(int numCrates, int LoadSize)
     }
     else
     {
-        return -1;
+        return 0;
     }
 };
 
