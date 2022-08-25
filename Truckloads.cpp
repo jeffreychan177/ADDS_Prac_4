@@ -13,11 +13,18 @@ Truckloads::Truckloads()
     loadSize = 0;
 };
 
-int Truckloads::numTrucks(int numCrates,int LoadSize)
+int Truckloads::numTrucks(int numCrates, int LoadSize)
 {
-    loadSize = LoadSize;
-    num = 1;
-    return divide(numCrates);
+    if (0 <= numCrates && numCrates <= 10000 && 0 <= LoadSize && LoadSize <= 10000)
+    {
+        loadSize = LoadSize;
+        num = 1;
+        return divide(numCrates);
+    }
+    else
+    {
+        return -1;
+    }
 };
 
 int Truckloads::divide(int numCrates)
@@ -41,5 +48,5 @@ int Truckloads::divide(int numCrates)
 
 void Truckloads::setLoadSize(int LoadSize)
 {
-        loadSize = LoadSize;
+    loadSize = LoadSize;
 };
