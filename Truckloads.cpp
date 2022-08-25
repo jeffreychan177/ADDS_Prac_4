@@ -13,7 +13,7 @@ Truckloads::Truckloads()
     loadSize = 0;
 };
 
-int Truckloads::numTrucks(int numCrates)
+int Truckloads::numTrucks(int numCrates,int LoadSize)
 {
     num = 1;
     return divide(numCrates);

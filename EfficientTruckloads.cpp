@@ -13,9 +13,9 @@ EfficientTruckloads::EfficientTruckloads()
     loadSize = 0;
 };
 
-int EfficientTruckloads::numTrucks(int numCrates)
+int EfficientTruckloads::numTrucks(int numCrates,int LoadSize)
 {
-
+    loadSize = LoadSize;
     num = 1;
     if (calculated.count(numCrates) > 0)
     {

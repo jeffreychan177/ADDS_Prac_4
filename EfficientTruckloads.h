@@ -5,7 +5,7 @@ class EfficientTruckloads {
     public:
     EfficientTruckloads();
     EfficientTruckloads(int LoadSize);
-    int numTrucks(int numCrates);
+  int numTrucks(int numCrates,int LoadSize);
     int divide(int numCrates);
     void setLoadSize(int LoadSize);
     int loadSize;

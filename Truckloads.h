@@ -4,7 +4,7 @@ class Truckloads {
     public:
     Truckloads();
     Truckloads(int LoadSize);
-    int numTrucks(int numCrates);
+    int numTrucks(int numCrates,int LoadSize);
     int divide(int numCrates);
     void setLoadSize(int LoadSize);
     int loadSize;

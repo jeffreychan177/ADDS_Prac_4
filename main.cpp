@@ -33,7 +33,7 @@ int main()
 
         if(numCrates > 0 && loadSize > 0)
     {
-        std::cout << truck.numTrucks(numCrates) << " " << Truck.numTrucks(numCrates) << std::endl;
+        std::cout << truck.numTrucks(numCrates,loadSize) << " " << Truck.numTrucks(numCrates,loadSize) << std::endl;
     }else{
         std::cout << "ERROR" << " " << "ERROR" << std::endl;
     }
