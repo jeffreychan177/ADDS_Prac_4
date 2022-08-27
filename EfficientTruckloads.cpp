@@ -19,16 +19,8 @@ int EfficientTruckloads::numTrucks(int numCrates, int LoadSize)
     {
         loadSize = LoadSize;
         num = 1;
-        if (calculated.count(numCrates) > 0)
-        {
-            return calculated.at(numCrates);
-        }
-        else
-        {
-            int div = divide(numCrates);
-            calculated.insert(std::pair<int, int>(numCrates, div));
-            return div;
-        }
+        int div = divide(numCrates);
+        return div;
     }
     else
     {
