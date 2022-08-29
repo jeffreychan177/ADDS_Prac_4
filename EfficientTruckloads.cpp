@@ -1,6 +1,7 @@
 #include "EfficientTruckloads.h"
 #include <iostream>
 #include <map>
+#include <string>
 EfficientTruckloads::EfficientTruckloads(int LoadSize)
 {
     loadSize = LoadSize;
@@ -29,9 +30,10 @@ int EfficientTruckloads::numTrucks(int numCrates, int LoadSize)
 
 int EfficientTruckloads::divide(int numCrates)
 {
-    if (calculated.count(numCrates) > 0)
+    input = std::to_string(numCrates) +","+std::to_string(loadSize);
+    if (calculated.count(input) > 0)
     {
-        return calculated.at(numCrates);
+        return calculated.at(input);
     }
     else
     {
@@ -49,7 +51,7 @@ int EfficientTruckloads::divide(int numCrates)
                 divide(((numCrates / 2) + 1));
             }
         }
-        calculated.insert(std::pair<int, int>(this->numCrates, num));
+        calculated.insert(std::pair<std::string, int>(input, num));
         return num;
     }
 };

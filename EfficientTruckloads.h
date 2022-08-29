@@ -1,6 +1,7 @@
 #ifndef _EFFICIENT_TRUCKLOADS_H
 #define _EFFICIENT_TRUCKLOADS_H
 #include <map>  
+#include <string>
 class EfficientTruckloads {
     public:
     EfficientTruckloads();
@@ -12,7 +13,8 @@ class EfficientTruckloads {
     private:
     int numCrates;
     int num;
-    std::map<int, int> calculated;
+    std::map<std::string, int> calculated;
+    std::string input;
 };
 
 #endif
